@@ -20,7 +20,7 @@ function main() {
       value: '5235',
     };
 
-    const builder = new ValidatorBuilder();
+    const builder = new ValidatorBuilder<IData>();
     builder.addRule((data: IData) => data.date, (date: Date) => date >= new Date(1998));
     builder.addRule((data: IData) => data.value, (value: string) => value.length >= 5);
     const validator = builder.getValidator();

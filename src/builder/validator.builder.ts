@@ -6,7 +6,7 @@ import { IHandler } from '../validator/handler.interface';
 import { Validator } from '../validator/validator';
 
 export class ValidatorBuilder<T> implements IBuilder<T> {
-  private handler: IHandler<T>;
+  private handler!: IHandler<T>;
 
   addRule<K>(selector: SelectorType<T, K>, predicate: PredicateType<K>): IBuilder<T> {
     const handler = new ValidatorHandler<T, K>(selector, predicate);

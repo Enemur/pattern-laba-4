@@ -3,7 +3,7 @@ import { SelectorType } from '../type/selector.type';
 import { PredicateType } from '../type/predicate.type';
 
 export class ValidatorHandler<T, K> implements IHandler<T>{
-  private nextHandler : IHandler<T>;
+  private nextHandler!: IHandler<T>;
 
   constructor(
     private readonly selector: SelectorType<T, K>,
